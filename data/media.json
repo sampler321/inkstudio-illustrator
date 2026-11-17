@@ -1,0 +1,388 @@
+[
+ {
+  "section": "Pressure",
+  "label": "Felt pen",
+  "plain": true,
+  "pt": 1.2,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Pressure",
+  "label": "Marker",
+  "plain": true,
+  "pt": 5,
+  "op": 100,
+  "blend": "multiply"
+ },
+ {
+  "section": "Pressure",
+  "label": "Wash",
+  "plain": true,
+  "pt": 16,
+  "op": 100,
+  "blend": "multiply"
+ },
+ {
+  "section": "Live",
+  "label": "Fine ink pen",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 8",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_8.png"
+ },
+ {
+  "section": "Live",
+  "label": "Mapping pen",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 5",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_5.png"
+ },
+ {
+  "section": "Live",
+  "label": "Technical pen",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 10",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_10.png"
+ },
+ {
+  "section": "Live",
+  "label": "Fineliner",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 3",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_3.png"
+ },
+ {
+  "section": "Live",
+  "label": "Felt tip",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 9",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_9.png"
+ },
+ {
+  "section": "Live",
+  "label": "Round brush pen",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 2",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_2.png"
+ },
+ {
+  "section": "Live",
+  "label": "Bold brush pen",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 4",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_4.png"
+ },
+ {
+  "section": "Live",
+  "label": "Marker nib",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 6",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_6.png"
+ },
+ {
+  "section": "Live",
+  "label": "Thick round",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 1",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_1.png"
+ },
+ {
+  "section": "Live",
+  "label": "Chisel nib",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 7",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Pressure_7.png"
+ },
+ {
+  "section": "Live",
+  "label": "Soft round",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Touch Calligraphic Brush",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal",
+  "thumb": "pen_Touch_Calligraphic_Brush.png"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle round",
+  "name": "Round",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle liner",
+  "name": "Liner",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle spotter",
+  "name": "Spotter",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle filbert",
+  "name": "Filbert",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle flat",
+  "name": "Flat",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle bright",
+  "name": "Bright",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle angle",
+  "name": "Angle",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle fan",
+  "name": "Fan",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle cat's tongue",
+  "name": "Cat's Tongue",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle dagger",
+  "name": "Dagger",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle mop",
+  "name": "Mop",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle dome",
+  "name": "Dome",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle deerfoot",
+  "name": "Deerfoot",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "section": "Live",
+  "label": "Bristle stippler",
+  "name": "Stippler",
+  "file": "adobe:Bristle Brush/Bristle Brush Library.ai",
+  "pt": 0,
+  "op": 100,
+  "blend": "normal"
+ },
+ {
+  "label": "Pencil (F)",
+  "set": "Perfect Pencils",
+  "name": "Graphite - F_anti-stretch",
+  "pt": 2.2,
+  "op": 85,
+  "blend": "multiply",
+  "section": "Textured"
+ },
+ {
+  "label": "Soft pencil (9B)",
+  "set": "Perfect Pencils",
+  "name": "Graphite - 9B_anti-stretch",
+  "pt": 3.5,
+  "op": 85,
+  "blend": "multiply",
+  "section": "Textured"
+ },
+ {
+  "label": "Coloured pencil",
+  "set": "Perfect Pencils",
+  "name": "Colored Pencil 1_anti-stretch",
+  "pt": 3.5,
+  "op": 90,
+  "blend": "multiply",
+  "section": "Textured"
+ },
+ {
+  "label": "Fineliner",
+  "set": "Pen",
+  "name": "RBL PEN 17",
+  "pt": 1.4,
+  "op": 100,
+  "blend": "normal",
+  "section": "Textured"
+ },
+ {
+  "label": "Ink pen (pressure)",
+  "set": "ProBrush Pressure Sensitive",
+  "name": "Pressure 8",
+  "pt": 3,
+  "op": 100,
+  "blend": "normal",
+  "section": "Textured"
+ },
+ {
+  "label": "Brush pen",
+  "set": "Ink",
+  "name": "Brush JA 01",
+  "pt": 5,
+  "op": 100,
+  "blend": "normal",
+  "section": "Textured"
+ },
+ {
+  "label": "Dry ink",
+  "set": "Dry Ink",
+  "name": "Dryink20",
+  "pt": 5,
+  "op": 100,
+  "blend": "normal",
+  "section": "Textured"
+ },
+ {
+  "label": "Marker",
+  "set": "Marker",
+  "name": "Marker Brushes 11",
+  "pt": 9,
+  "op": 75,
+  "blend": "multiply",
+  "section": "Textured"
+ },
+ {
+  "label": "Watercolour",
+  "set": "Watercolor 3",
+  "name": "Watercolor_Standard_14",
+  "pt": 18,
+  "op": 60,
+  "blend": "multiply",
+  "section": "Textured"
+ },
+ {
+  "label": "Watercolour wash",
+  "set": "Watercolor 3",
+  "name": "Watercolor_Dissipated_7",
+  "pt": 34,
+  "op": 45,
+  "blend": "multiply",
+  "section": "Textured"
+ },
+ {
+  "label": "Gouache",
+  "set": "Gouache Textured",
+  "name": "Gouache Textured Brush 15",
+  "pt": 12,
+  "op": 95,
+  "blend": "normal",
+  "section": "Textured"
+ },
+ {
+  "label": "Charcoal",
+  "set": "Charcoals",
+  "name": "Charcoals 14",
+  "pt": 10,
+  "op": 90,
+  "blend": "multiply",
+  "section": "Textured"
+ },
+ {
+  "label": "Soft pastel",
+  "set": "Pastels",
+  "name": "Pastel Brush 4",
+  "pt": 10,
+  "op": 85,
+  "blend": "multiply",
+  "section": "Textured"
+ },
+ {
+  "label": "Oil pastel",
+  "set": "Oil Pastels",
+  "name": "Oil Panda Art Brush 14",
+  "pt": 9,
+  "op": 95,
+  "blend": "normal",
+  "section": "Textured"
+ }
+]

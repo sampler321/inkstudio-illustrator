@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionList>
+  <Extension Id="com.inkdraw.studio.library"><HostList><Host Name="ILST" Port="8098"/></HostList></Extension>
+  <Extension Id="com.inkdraw.studio.rail"><HostList><Host Name="ILST" Port="8099"/></HostList></Extension>
+</ExtensionList>

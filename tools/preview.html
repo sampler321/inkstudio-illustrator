@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../library/library.css"></head>
+<body><div id="top"><input id="search" type="search" placeholder="Search brushes"></div>
+<div id="main"><div id="sets"></div><div id="list"></div></div>
+<script>
+// stand-ins for Illustrator's CEP runtime, to look at the panel in a plain browser
+window.SystemPath = { EXTENSION: 'ext' };
+window.CSInterface = function () {}; CSInterface.THEME_COLOR_CHANGED_EVENT = 'x';
+CSInterface.prototype.getSystemPath = function () { return location.pathname.replace(/\/tools\/[^/]*$/, ''); };
+CSInterface.prototype.getHostEnvironment = function () { return { appSkinInfo: { panelBackgroundColor: { color: { red: 50, green: 50, blue: 50 } } } }; };
+CSInterface.prototype.addEventListener = function () {};
+CSInterface.prototype.evalScript = function (s, cb) { console.log('evalScript', s); cb && cb('ok'); };
+window.cep = { fs: { readFile: function (p) { var x = new XMLHttpRequest(); x.open('GET', p, false); x.send(); return { data: x.responseText }; } } };
+localStorage.setItem('ink.set', JSON.stringify(location.hash ? decodeURIComponent(location.hash.slice(1)) : 'Watercolor 3'));
+</script>
+<script src="../library/library.js"></script></body></html>

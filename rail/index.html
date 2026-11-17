@@ -1,0 +1,128 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>InkStudio Rail</title>
+<style>
+:root { --bg: #323232; --fg: #d6d6d6; --dim: #8a8a8a; --hi: #1473e6; --line: #2a2a2a; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font: 11px "Adobe Clean", -apple-system, "Segoe UI", sans-serif; user-select: none; overflow: hidden; }
+#rail { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px 0; height: 100%; overflow-y: auto; }
+.lbl { color: var(--dim); font-size: 10px; }
+.val { font-size: 10px; min-height: 12px; }
+/* vertical sliders, Procreate's left edge */
+input[type=range].v { -webkit-appearance: slider-vertical; writing-mode: bt-lr; width: 28px; height: 120px; max-height: 16vh; min-height: 60px; flex-shrink: 1; }
+button { width: 44px; height: 34px; border-radius: 6px; border: 1px solid var(--line); background: rgba(255,255,255,.07); color: var(--fg); font-size: 18px; }
+button:active { background: var(--hi); }
+#chip { flex-shrink: 0; cursor: pointer; width: 36px; height: 36px; border-radius: 50%; border: 2px solid #888; padding: 0; overflow: hidden; }
+#chip input { width: 60px; height: 60px; margin: -10px; border: 0; padding: 0; background: none; }
+#hist { display: grid; grid-template-columns: repeat(2, 16px); gap: 4px; }
+#hist div { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #666; }
+.sp { flex: 1; }
+#tools { display: flex; flex-direction: column; gap: 4px; }
+#tools button { height: 32px; font-size: 16px; }
+#tools button.on { background: var(--hi); color: #fff; }
+#prev { width: 52px; height: 36px; border-radius: 6px; margin: 2px 0; flex-shrink: 0; border-radius: 4px; background: #f6f3ea; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+#pbar { width: 84%; border-radius: 999px; background: #1e1e1e; }
+</style></head>
+<body><div id="rail">
+  <div id="tools">
+    <button data-t="Adobe Eraser Tool" title="Eraser">⌫</button>
+    <button data-t="Adobe Shaper Tool" title="Shape">◯</button>
+    <button data-t="Adobe Select Tool" title="Select (V)">➤</button>
+    <button data-t="Adobe Eyedropper Tool" title="Eyedropper (I)">⌖</button>
+  </div>
+  <div id="chip" title="Colour"><input id="col" type="hidden" value="#1e1e1e"></div>
+  <div id="hist"></div>
+  <span class="lbl">Size</span>
+  <input id="size" class="v" type="range" min="0" max="100" step="1" value="29">
+  <span id="sizev" class="val"></span>
+  <span class="lbl">Opacity</span>
+  <input id="op" class="v" type="range" min="1" max="100" step="1" value="100">
+  <span id="opv" class="val"></span>
+  <button id="undo" title="Undo">↶</button>
+  <button id="redo" title="Redo">↷</button>
+</div>
+<script src="../js/CSInterface.js"></script>
+<script>
+var cs = new CSInterface();
+// every call runs the current host.jsx (the panel's script engine otherwise keeps the version from panel start)
+var _ev = cs.evalScript.bind(cs);
+cs.evalScript = function (call, cb) { if (/^\$\.evalFile/.test(call)) return _ev(call, cb); _ev('$.evalFile("' + cs.getSystemPath(SystemPath.EXTENSION) + '/jsx/host.jsx");' + call, cb); };
+function skin() {
+  try { var c = cs.getHostEnvironment().appSkinInfo.panelBackgroundColor.color;
+    document.documentElement.style.setProperty('--bg', 'rgb(' + Math.round(c.red) + ',' + Math.round(c.green) + ',' + Math.round(c.blue) + ')');
+    if (c.red > 128) document.documentElement.style.setProperty('--fg', '#222'); } catch (e) {}
+}
+var hist = []; try { hist = JSON.parse(localStorage.getItem('ink.colors') || '[]'); } catch (e) {}
+function drawHist() {
+  var h = document.getElementById('hist'); h.innerHTML = '';
+  hist.slice(0, 10).forEach(function (c) { var d = document.createElement('div'); d.style.background = c; d.onclick = function () { setColor(c); }; h.appendChild(d); });
+}
+function setColor(c) {
+  document.getElementById('col').value = c;
+  document.getElementById('chip').style.background = c;
+  hist = [c].concat(hist.filter(function (x) { return x !== c; })).slice(0, 10);
+  try { localStorage.setItem('ink.colors', JSON.stringify(hist)); } catch (e) {}
+  drawHist();
+  cs.evalScript('inkSetColor("' + c + '")');
+}
+var size = document.getElementById('size'), op = document.getElementById('op');
+// log scale 0.02-5 pt: Envato brush art is large, so 1 pt is already a very wide stroke
+function pt(v) { return 0.02 * Math.pow(2500, v / 100); }
+function pos(w) { return Math.max(0, Math.min(100, Math.round(100 * Math.log(w / 0.02) / Math.log(2500)))); }
+var zoom = 1, bh = 1, curW = 0.1;
+function preview() { if (!document.getElementById('pbar')) return;   // the stroke as it will appear: weight x brush width x zoom, with the opacity and colour
+  var px = Math.max(1, Math.min(60, curW * bh * zoom)), b = document.getElementById('pbar');
+  b.style.height = px + 'px'; b.style.opacity = op.value / 100; b.style.background = document.getElementById('col').value;
+}
+function showSize(w) { curW = w; preview(); document.getElementById('sizev').textContent = (w < 1 ? w.toFixed(2) : w.toFixed(1)) + ' pt'; }
+size.oninput = function () { showSize(pt(size.value)); };
+size.onchange = function () { var w = pt(size.value); showSize(w); cs.evalScript('inkSetSize(' + w.toFixed(3) + ')'); };   // apply on release: one step, not dozens
+op.oninput = function () { document.getElementById('opv').textContent = op.value + '%'; };
+op.onchange = function () { document.getElementById('opv').textContent = op.value + '%'; cs.evalScript('inkSetOpacity(' + op.value + ')'); try { localStorage.setItem('ink.op', op.value); } catch (e) {} };
+// new strokes take the rail's opacity (checked twice a second)
+try { var so = localStorage.getItem('ink.op'); if (so) { op.value = so; } } catch (e) {}
+var stampOn = true; try { stampOn = localStorage.getItem('ink.stampOff') !== '1'; } catch (e) {}
+setInterval(function () { if (stampOn) cs.evalScript('inkStampNew(' + op.value + ')', function (r) {
+  var v = Number(String(r).split('|')[1]);   // a medium picked in the library may have changed the opacity
+  if (v >= 1 && v <= 100 && v != op.value && document.activeElement !== op) { op.value = v; document.getElementById('opv').textContent = v + '%'; }
+}); }, 500);
+// Rapid scripted tool switches crash Illustrator 2026 inside Adobe's OnBoarding plugin, so switches go
+// out one at a time, at least 1.2 s apart; only the latest request is kept, a no-op switch is skipped.
+var toolWant = '', toolBusy = false, toolLast = 0;
+function wantTool(t) { toolWant = t; pumpTool(); }
+function pumpTool() {
+  if (toolBusy || !toolWant) return;
+  var wait = toolLast + 1200 - Date.now();
+  if (wait > 0) { setTimeout(pumpTool, wait); return; }
+  var t = toolWant; toolWant = ''; toolBusy = true;
+  cs.evalScript('inkTool("' + t + '")', function () { toolBusy = false; toolLast = Date.now(); pumpTool(); });
+}
+// tools (only names verified on Illustrator 2026: an unknown name crashes Illustrator)
+Array.prototype.forEach.call(document.querySelectorAll('#tools button'), function (b) {
+  b.onclick = function () {
+    wantTool(b.dataset.t);
+    Array.prototype.forEach.call(document.querySelectorAll('#tools button'), function (x) { x.classList.toggle('on', x === b); });
+  };
+});
+document.getElementById('undo').onclick = function () { cs.evalScript('inkUndo()'); };
+document.getElementById('redo').onclick = function () { cs.evalScript('inkRedo()'); };
+document.getElementById('chip').onclick = function () {
+  cs.evalScript('$.evalFile("' + cs.getSystemPath(SystemPath.EXTENSION) + '/jsx/host.jsx"); inkPickColor("' + document.getElementById('col').value + '")', function (h) {
+    if (/^#[0-9a-f]{6}$/i.test(h)) { setColor(h); preview(); }
+  });
+};
+function sync() {
+  cs.evalScript('inkState()', function (r) {
+    try { var s = JSON.parse(r); if (s.zoom) zoom = s.zoom; if (s.bh) bh = s.bh;
+      if (s.size && document.activeElement !== size) { var w = Number(s.size); if (w === 1) { w = 0.1; cs.evalScript('inkSetSize(0.1)'); }  // Illustrator's 1 pt default is far too wide for these brushes
+        size.value = pos(w); showSize(w); }
+      if (s.color) { document.getElementById('col').value = s.color; document.getElementById('chip').style.background = s.color; } } catch (e) {}
+  });
+}
+// (re)load the host functions: they load once at panel start, a page reload would keep old ones
+cs.evalScript('$.evalFile("' + cs.getSystemPath(SystemPath.EXTENSION) + '/jsx/host.jsx")');
+skin(); drawHist(); sync();
+document.getElementById('opv').textContent = op.value + '%';
+cs.addEventListener(CSInterface.THEME_COLOR_CHANGED_EVENT, skin);
+cs.addEventListener('documentAfterActivate', sync);
+setInterval(sync, 1500);   // follows zoom and brush changes
+</script></body></html>

@@ -1,0 +1,231 @@
+<workspace version="1">
+	<dock anchor="top" content="control-bar" is-closed="false">
+		<control-bar id="1" origin="11 40" size="1008 31" is-closed="true" app-data="ControlBar"/>
+	</dock>
+	<dock anchor="bottom" content="control-bar" is-closed="false"/>
+	<dock anchor="left" content="palette toolbar" is-closed="false">
+		<toolbar id="2" size-variant="vertical-narrow" is-closed="false" app-data="Basic"/>
+		<toolbar id="3" size-variant="vertical-wide" is-closed="true" app-data="ToolBar"/>
+	</dock>
+	<dock anchor="right" content="palette toolbar" is-closed="false">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="auto-flow">
+			<tab-group active-palette="4" is-closed="false">
+				<palette id="4" is-closed="false" preferred-unconstrained-size="120 900" preferred-constrained-size="120 900" current-state="1" is-minimized="false" app-data="CSXSExtension_com.inkdraw.studio.rail_0" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="auto-flow">
+			<tab-group active-palette="5" is-closed="false">
+				<palette id="5" is-closed="false" preferred-unconstrained-size="320 560" preferred-constrained-size="320 560" current-state="1" is-minimized="false" app-data="CSXSExtension_com.inkdraw.studio.library_0" host-cached-sizes="false"/>
+			</tab-group>
+			<tab-group active-palette="6" is-closed="false">
+				<palette id="6" is-closed="false" preferred-unconstrained-size="320 180" preferred-constrained-size="320 180" current-state="1" is-minimized="false" app-data="Color" host-cached-sizes="false"/>
+				<palette id="7" is-closed="false" preferred-unconstrained-size="320 180" preferred-constrained-size="320 180" current-state="1" is-minimized="false" app-data="AdobeSwatch_" host-cached-sizes="false"/>
+			</tab-group>
+			<tab-group active-palette="8" is-closed="false">
+				<palette id="8" is-closed="false" preferred-unconstrained-size="320 200" preferred-constrained-size="320 200" current-state="1" is-minimized="false" app-data="AdobeLayerPalette" host-cached-sizes="false"/>
+				<palette id="9" is-closed="false" preferred-unconstrained-size="320 200" preferred-constrained-size="320 200" current-state="1" is-minimized="false" app-data="AdobeBrush" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="684 175" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="21" is-closed="false">
+				<palette id="21" is-closed="true" preferred-unconstrained-size="360 720" preferred-constrained-size="360 720" current-state="1" is-minimized="false" app-data="Interactive Tutorial Builder Ai" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="134 189" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="22" is-closed="false">
+				<palette id="22" is-closed="false" preferred-unconstrained-size="242 713" preferred-constrained-size="242 713" current-state="1" is-minimized="false" app-data="GenerateUI" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="706 339" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="23" is-closed="false">
+				<palette id="23" is-closed="true" preferred-unconstrained-size="240 210" preferred-constrained-size="240 210" current-state="1" is-minimized="false" app-data="CSS" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="776 288" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="24" is-closed="false">
+				<palette id="24" is-closed="true" preferred-unconstrained-size="260 568" preferred-constrained-size="260 568" current-state="1" is-minimized="false" app-data="Retype (Beta)" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="776 516" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="25" is-closed="false">
+				<palette id="25" is-closed="true" preferred-unconstrained-size="240 111" preferred-constrained-size="240 111" current-state="1" is-minimized="false" app-data="History" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="1235 94" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="94" layout-mode="manual">
+			<tab-group active-palette="26" is-closed="false">
+				<palette id="26" is-closed="false" preferred-unconstrained-size="240 500" preferred-constrained-size="240 500" current-state="1" is-minimized="false" app-data="Mockup" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="794 80" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="27" is-closed="false">
+				<palette id="27" is-closed="false" preferred-unconstrained-size="240 450" preferred-constrained-size="240 450" current-state="1" is-minimized="false" app-data="3D and Materials" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="612 324" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="28" is-closed="false">
+				<palette id="28" is-closed="true" preferred-unconstrained-size="240 450" preferred-constrained-size="240 450" current-state="1" is-minimized="false" app-data="ccx-timeline" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="744 326" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="39" layout-mode="manual">
+			<tab-group active-palette="29" is-closed="false">
+				<palette id="29" is-closed="true" preferred-unconstrained-size="240 141" preferred-constrained-size="240 95" current-state="1" is-minimized="false" app-data="Appearance" host-cached-sizes="false"/>
+				<palette id="30" is-closed="true" preferred-unconstrained-size="240 300" preferred-constrained-size="240 80" current-state="1" is-minimized="false" app-data="NamedStyle" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="130 376" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="31" is-closed="false">
+				<palette id="31" is-closed="false" preferred-unconstrained-size="288 404" preferred-constrained-size="288 404" current-state="1" is-minimized="false" app-data="PatternOptionsPanel" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="82 116" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="32" is-closed="false">
+				<palette id="32" is-closed="false" preferred-unconstrained-size="404 173" preferred-constrained-size="404 173" current-state="1" is-minimized="false" app-data="AdobeAltGlyphsPanel" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="700 312" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="33" is-closed="false">
+				<palette id="33" is-closed="false" preferred-unconstrained-size="240 111" preferred-constrained-size="240 111" current-state="1" is-minimized="false" app-data="AdobeCharStyles" host-cached-sizes="false"/>
+				<palette id="34" is-closed="false" preferred-unconstrained-size="240 111" preferred-constrained-size="240 111" current-state="1" is-minimized="false" app-data="AdobeParaStyles" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="640 384" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="35" is-closed="false">
+				<palette id="35" is-closed="false" preferred-unconstrained-size="240 156" preferred-constrained-size="240 156" current-state="1" is-minimized="false" app-data="AdobeSeparationPreview" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="308 342" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="36" is-closed="false">
+				<palette id="36" is-closed="false" preferred-unconstrained-size="490 195" preferred-constrained-size="490 195" current-state="2" is-minimized="false" app-data="AdobeFlatteningPreview" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="375 494" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="37" is-closed="false">
+				<palette id="37" is-closed="false" preferred-unconstrained-size="240 125" preferred-constrained-size="240 125" current-state="1" is-minimized="false" app-data="Vectorize" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="415 372" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="39" is-closed="false">
+				<palette id="38" is-closed="false" preferred-unconstrained-size="240 177" preferred-constrained-size="240 177" current-state="1" is-minimized="false" app-data="SVGInteractivity" host-cached-sizes="false"/>
+				<palette id="39" is-closed="false" preferred-unconstrained-size="240 210" preferred-constrained-size="240 210" current-state="1" is-minimized="false" app-data="AdobeVariablesPanel" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="258 116" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="40" is-closed="false">
+				<palette id="40" is-closed="false" preferred-unconstrained-size="430 73" preferred-constrained-size="430 73" current-state="1" is-minimized="false" app-data="AdobeHorizontalTabPanel" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="0 0" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="41" is-closed="false">
+				<palette id="41" is-closed="false" preferred-unconstrained-size="130 415" preferred-constrained-size="130 415" current-state="1" is-minimized="false" app-data="AdobeVerticalTabPanel" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="102 486" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="43" is-closed="false">
+				<palette id="42" is-closed="false" preferred-unconstrained-size="240 125" preferred-constrained-size="240 125" current-state="1" is-minimized="false" app-data="Actions" host-cached-sizes="false"/>
+				<palette id="43" is-closed="false" preferred-unconstrained-size="240 125" preferred-constrained-size="240 125" current-state="1" is-minimized="false" app-data="Links" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="672 132" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="44" is-closed="false">
+				<palette id="44" is-closed="false" preferred-unconstrained-size="240 188" preferred-constrained-size="240 188" current-state="1" is-minimized="false" app-data="Character" host-cached-sizes="false"/>
+				<palette id="45" is-closed="false" preferred-unconstrained-size="241 257" preferred-constrained-size="241 257" current-state="1" is-minimized="false" app-data="Paragraph" host-cached-sizes="false"/>
+				<palette id="46" is-closed="false" preferred-unconstrained-size="248 88" preferred-constrained-size="248 88" current-state="1" is-minimized="false" app-data="AdobeOpenTypeFont" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="87 204" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="47" is-closed="false">
+				<palette id="47" is-closed="false" preferred-unconstrained-size="240 257" preferred-constrained-size="266 257" current-state="1" is-minimized="false" app-data="Document Info" host-cached-sizes="false"/>
+				<palette id="48" is-closed="false" preferred-unconstrained-size="240 45" preferred-constrained-size="240 45" current-state="3" is-minimized="false" app-data="AdobeObjectAttributes" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="82 342" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="49" is-closed="false">
+				<palette id="49" is-closed="false" preferred-unconstrained-size="256 132" preferred-constrained-size="280 132" current-state="1" is-minimized="false" app-data="Navigator" host-cached-sizes="false"/>
+				<palette id="50" is-closed="false" preferred-unconstrained-size="240 88" preferred-constrained-size="240 88" current-state="2" is-minimized="false" app-data="Info" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="90 402" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="51" is-closed="false">
+				<palette id="51" is-closed="false" preferred-unconstrained-size="240 143" preferred-constrained-size="240 143" current-state="1" is-minimized="false" app-data="Magic Wand" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="100 672" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="0" layout-mode="manual">
+			<tab-group active-palette="54" is-closed="false">
+				<palette id="52" is-closed="false" preferred-unconstrained-size="240 298" preferred-constrained-size="240 298" current-state="1" is-minimized="false" app-data="Transform" host-cached-sizes="false"/>
+				<palette id="53" is-closed="false" preferred-unconstrained-size="244 172" preferred-constrained-size="244 172" current-state="2" is-minimized="false" app-data="Align" host-cached-sizes="false"/>
+				<palette id="54" is-closed="false" preferred-unconstrained-size="240 107" preferred-constrained-size="240 107" current-state="1" is-minimized="false" app-data="Pathfinder" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="930 468" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="39" layout-mode="manual">
+			<tab-group active-palette="56" is-closed="false">
+				<palette id="55" is-closed="false" preferred-unconstrained-size="240 31" preferred-constrained-size="240 31" current-state="3" is-minimized="false" app-data="Stroke" host-cached-sizes="false"/>
+				<palette id="56" is-closed="false" preferred-unconstrained-size="240 103" preferred-constrained-size="240 103" current-state="2" is-minimized="false" app-data="Transparency" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="672 319" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="39" layout-mode="manual">
+			<tab-group active-palette="58" is-closed="false">
+				<palette id="57" is-closed="false" preferred-unconstrained-size="240 183" preferred-constrained-size="240 111" current-state="1" is-minimized="false" app-data="Artboards" host-cached-sizes="false"/>
+				<palette id="58" is-closed="false" preferred-unconstrained-size="270 460" preferred-constrained-size="270 460" current-state="1" is-minimized="false" app-data="Export" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+	<dock anchor="none" content="palette toolbar" origin="714 571" user-movable="false" is-closed="true">
+		<tab-pane mode="expanded" preferred-iconic-length="39" layout-mode="manual">
+			<tab-group active-palette="59" is-closed="false">
+				<palette id="59" is-closed="false" preferred-unconstrained-size="250 308" preferred-constrained-size="250 308" current-state="1" is-minimized="false" app-data="AdobeGradientEditor" host-cached-sizes="false"/>
+			</tab-group>
+		</tab-pane>
+	</dock>
+</workspace>
