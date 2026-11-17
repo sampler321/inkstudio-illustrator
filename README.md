@@ -16,7 +16,6 @@ Brushes are **not** included. InkStudio works with Illustrator's own brush libra
   filbert, fan and more, pencils, charcoal, pastel, watercolour, gouache) set up with size, opacity and blend mode.
 - **InkStudio Rail** beside the toolbar: select, eraser, eyedropper, shape, size and opacity, colour with history,
   undo and redo.
-- **New paper**: a warm white page with paper grain multiplied over the drawing.
 - **Pressure opacity** for plain pens (with PenCast): each stroke fades with the pressure you drew it with.
 - An **InkStudio workspace** that hides what a drawing session does not need.
 

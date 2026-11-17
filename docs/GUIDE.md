@@ -55,11 +55,6 @@ Brush kinds, as Illustrator defines them:
 Each tool sets brush, size, opacity and blend mode together; Multiply makes overlapping strokes darken like ink and
 marker.
 
-## Paper
-
-**New paper** opens an A4 page in warm white with a locked paper layer and a grain layer multiplied over the
-drawing, so strokes look like they sit on real paper. Draw on the layer in between.
-
 ## Pressure
 
 Illustrator reads pen pressure for brush width (Paintbrush options and the brush's own pressure settings). For
