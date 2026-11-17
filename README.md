@@ -19,7 +19,8 @@ Brushes are **not** included. InkStudio works with Illustrator's own brush libra
 - **Pressure opacity** for plain pens (with PenCast): each stroke fades with the pressure you drew it with.
 - An **InkStudio workspace** that hides what a drawing session does not need.
 
-See [docs/GUIDE.md](docs/GUIDE.md) for the full guide.
+Manual: [InkStudio for Illustrator.pdf](docs/InkStudio%20for%20Illustrator.pdf) (A5), with a print edition of two A5 pages per
+landscape A4 sheet next to it. A shorter text guide is in [docs/GUIDE.md](docs/GUIDE.md).
 
 ## Install (Mac, development)
 

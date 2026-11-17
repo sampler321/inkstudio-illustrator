@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>InkStudio for Illustrator</title>
+<style>
+@page { size: A5; margin: 10mm 10mm 12mm 10mm; @bottom-center { content: counter(page); font: 7pt Arial; color: #555; } }
+* { box-sizing: border-box; }
+body { font-family: Arial, Helvetica, sans-serif; font-size: 8.5pt; line-height: 1.35; color: #000; margin: 0; }
+h1 { font-size: 14pt; margin: 6mm 0 2mm; break-after: avoid; }
+h2 { font-size: 10.5pt; margin: 4mm 0 1.5mm; break-after: avoid; }
+h3 { font-size: 9pt; margin: 3mm 0 1mm; break-after: avoid; }
+p { margin: 0 0 2mm; }
+.lead { font-size: 9pt; }
+table { width: 100%; border-collapse: collapse; margin: 1.5mm 0 3mm; font-size: 8pt; }
+tr { break-inside: avoid; }
+th, td { text-align: left; vertical-align: top; padding: 1mm 1.5mm; border-bottom: 0.3pt solid #999; }
+th { font-weight: bold; border-bottom: 0.8pt solid #000; }
+td:first-child { font-weight: bold; width: 30%; }
+table.ico td:first-child { width: 14mm; text-align: center; vertical-align: middle; }
+table.ico img { max-width: 12mm; max-height: 9mm; display: inline-block; }
+table.ico td { vertical-align: middle; }
+figure { margin: 2mm 0 3mm; break-inside: avoid; }
+figure img { display: block; max-width: 100%; border: 0.3pt solid #666; }
+figcaption { font-size: 7pt; color: #333; margin-top: 1mm; }
+.side { float: right; width: 42mm; margin: 0 0 2mm 4mm; }
+.clear { clear: both; }
+.strip img { border: none; width: 100%; }
+.cover h1 { font-size: 22pt; margin: 0 0 2mm; }
+.cover .sub { font-size: 10pt; margin-bottom: 3mm; }
+.cover .meta { font-size: 7.5pt; color: #333; margin-bottom: 4mm; }
+.toc { columns: 2; column-gap: 6mm; font-size: 8.5pt; }
+.toc div { break-inside: avoid; margin-bottom: 0.8mm; display: flex; justify-content: space-between; padding-right: 2mm; }
+.toc .pg { font-weight: bold; }
+kbd { font-family: Arial; font-size: 7.5pt; border: 0.5pt solid #555; border-radius: 1mm; padding: 0 0.8mm; }
+</style>
+</head>
+<body>
+<section class="cover">
+<h1>InkStudio for Illustrator</h1>
+<div class="sub">Drawing manual: the brush library, the rail, media tools and pressure, and how to draw traditional media with Illustrator's vector brushes</div>
+<div class="meta">Version 0.1, November 2026. Source: github.com/sampler321/inkstudio-illustrator. Sister projects: InkStudio for Photoshop, PenCast.</div>
+</section>
+<h2>Contents</h2>
+<div class="toc">
+  <div><span>Workspace at a glance</span><span class="pg">1</span></div>
+  <div><span>Rail beside the toolbar</span><span class="pg">2</span></div>
+  <div><span>Brush library</span><span class="pg">4</span></div>
+  <div><span>Media tools</span><span class="pg">5</span></div>
+  <div><span>Pressure to opacity</span><span class="pg">6</span></div>
+  <div><span>Brush kinds in Illustrator</span><span class="pg">7</span></div>
+  <div><span>Pressure and the Paintbrush</span><span class="pg">7</span></div>
+  <div><span>Drawing traditional media in vector</span><span class="pg">7</span></div>
+  <div><span>Layers and paper</span><span class="pg">8</span></div>
+  <div><span>Shortcuts</span><span class="pg">8</span></div>
+  <div><span>Troubleshooting</span><span class="pg">8</span></div>
+</div>
+
+<h1>Workspace at a glance</h1>
+<p class="lead">InkStudio puts a Procreate-like layer on top of Illustrator. Everything you draw stays ordinary Illustrator artwork: vector paths with Illustrator brushes, editable afterwards with any Illustrator tool.</p>
+<figure><img src="img/print/workspace.png" alt=""><figcaption>Illustrator's toolbar and the InkStudio rail on the left, the artboard in the middle, InkStudio Brushes on the right above Layers, Brushes, Color and Gradient.</figcaption></figure>
+<p>Choose <b>Window &gt; Workspace &gt; InkStudio</b> to get this layout. If a panel is missing, open it from <b>Window &gt; Extensions &gt; InkStudio Brushes</b> or <b>InkStudio Rail</b>. Everything else in Illustrator stays in its menus and panels.</p>
+<p>Illustrator's own drawing tools do the drawing: the <b>Paintbrush</b> (B) for brushes with pressure, the <b>Pencil</b> (N) for textured brushes drawn live. InkStudio never switches to the Paintbrush by script, because that crashes Illustrator 2026; press B yourself.</p>
+
+<h1>Rail beside the toolbar</h1>
+<figure class="side" style="width:16mm"><img src="img/print/rail.png" alt=""><figcaption>The rail.</figcaption></figure>
+<p class="lead">The rail holds what you touch while drawing: four tools, colour, size, opacity, undo and redo.</p>
+<table class="k ico">
+<tr><th>Icon</th><th>Name and use</th></tr>
+<tr><td><img src="img/print/icons/rl-eraser.png" alt=""></td><td><b>Eraser.</b> Erases parts of paths; drag across a stroke to cut it.</td></tr>
+<tr><td><img src="img/print/icons/rl-shape.png" alt=""></td><td><b>Shape.</b> Shaper tool: scribble a rough rectangle, circle or line and Illustrator turns it into a clean shape.</td></tr>
+<tr><td><img src="img/print/icons/rl-select.png" alt=""></td><td><b>Select (V).</b> Select and move strokes. Selected strokes take the next brush, size, colour and opacity you choose.</td></tr>
+<tr><td><img src="img/print/icons/rl-eyedrop.png" alt=""></td><td><b>Eyedropper (I).</b> Picks colour and style from existing artwork.</td></tr>
+<tr><td><img src="img/print/icons/rl-colour.png" alt=""></td><td><b>Colour.</b> The current stroke colour; click it for the colour picker.</td></tr>
+<tr><td><img src="img/print/icons/rl-swatches.png" alt=""></td><td><b>Recent colours.</b> Colours you used lately; click one to draw with it again.</td></tr>
+<tr><td><img src="img/print/icons/rl-size.png" alt=""></td><td><b>Size and opacity.</b> Drag the upper fader for stroke weight in points, the lower one for opacity. Both apply to selected strokes and to the next ones.</td></tr>
+<tr><td><img src="img/print/icons/rl-undo.png" alt=""></td><td><b>Undo.</b> One step back.</td></tr>
+<tr><td><img src="img/print/icons/rl-redo.png" alt=""></td><td><b>Redo.</b> One step forward.</td></tr>
+</table>
+<p>Illustrator has no default opacity for new strokes, so the rail stamps its opacity on every new stroke a moment after you draw it.</p>
+<div class="clear"></div>
+
+<h1>Brush library</h1>
+<figure class="side" style="width:46mm"><img src="img/print/lib-medium-ink.png" alt=""><figcaption>The ink medium: each brush with a preview, the pack introduction above.</figcaption></figure>
+<p class="lead">InkStudio Brushes lists every brush you own, with Illustrator-style previews. The column on the left chooses what you see; the right side shows the brushes.</p>
+<p><b>Media</b> shows ready-made drawing tools (next chapter). <b>Favourites</b> shows the brushes you starred. <b>Recent</b> shows what you used last. <b>All packs</b> lists every pack.</p>
+<p>Under <b>Mediums</b> the brushes are grouped by what they imitate: airbrush and spray, brush pen, chalk, charcoal, decorative, gouache and acrylic, ink, mixed media, oil and paint, pastel and crayon, pen and marker, pencil, print and engraving, splatter, technical, texture and grain, watercolour. The number after each is how many packs it holds. <b>Makers</b> groups packs by the person or studio who made them, and <b>Packs</b> lists each pack by name.</p>
+<p>A pack shows its maker, tags and a short introduction with what it is best for, followed by its brushes. Tap a brush to load it: InkStudio opens the pack's Illustrator brush library once, applies the brush to the Paintbrush and to any selected strokes. The star adds it to Favourites. The search field at the top matches pack names, makers, tags and brush names.</p>
+<div class="clear"></div>
+<figure class="side" style="width:46mm"><img src="img/print/lib-allpacks.png" alt=""><figcaption>All packs, with a pack's details.</figcaption></figure>
+<figure class="side" style="width:46mm"><img src="img/print/lib-favourites.png" alt=""><figcaption>Favourites.</figcaption></figure>
+<div class="clear"></div>
+
+<h1>Media tools</h1>
+<figure class="side" style="width:46mm"><img src="img/print/lib-media-500.png" alt=""><figcaption>Live pens and bristle shapes.</figcaption></figure>
+<p class="lead">Media turns brushes into tools you recognise from a desk. Each tool sets the brush, size, opacity and blend mode in one tap.</p>
+<h2>Pressure to opacity pens</h2>
+<p>Felt pen, Marker and Wash are plain pens with a pressure width. They work without any pack and can also fade with pressure (next chapter).</p>
+<h2>Live with pressure: Paintbrush (B)</h2>
+<p>Pens whose width follows pen pressure while you draw: fine ink pen, mapping pen, technical pen, fineliner, felt tip, round and bold brush pens, marker nib, thick round, chisel nib and soft round. Below them are Illustrator's <b>bristle brushes</b> in real brush shapes: round, liner, spotter, filbert, flat, bright, angle, fan, cat's tongue, dagger, mop, dome, deerfoot and stippler. The bristle tools use Adobe's own Bristle Brush Library, so they work for everyone. Draw these with the Paintbrush (B).</p>
+<h2>Textured: live with the Pencil (N)</h2>
+<p>Pencil (F), soft pencil (9B), coloured pencil, fineliner, brush pen, dry ink, marker, watercolour, watercolour wash, gouache, charcoal, soft pastel and oil pastel. These are art brushes from specific packs that show their texture while you draw with the Pencil tool (N). A tool whose pack is not installed shows "Could not load".</p>
+<p>Tools set to Multiply darken where strokes overlap, like ink, marker and watercolour on paper.</p>
+<div class="clear"></div>
+<figure class="side" style="width:46mm"><img src="img/print/lib-media-1100.png" alt=""><figcaption>More bristle shapes.</figcaption></figure>
+<figure class="side" style="width:46mm"><img src="img/print/lib-media-1700.png" alt=""><figcaption>Textured tools.</figcaption></figure>
+<div class="clear"></div>
+
+<h1>Pressure to opacity</h1>
+<figure class="side" style="width:46mm"><img src="img/print/lib-media.png" alt=""><figcaption>Pressure to opacity at the top of Media.</figcaption></figure>
+<p>Illustrator can make a stroke wider with pressure, but not lighter. InkStudio adds that for the three plain pens. With PenCast relaying the pen, the relay sends the pressure along each stroke when you lift the pen, and InkStudio turns it into an opacity gradient on that stroke: press lightly and the line fades, press hard and it is solid.</p>
+<table>
+<tr><th>Control</th><th>Effect</th></tr>
+<tr><td>Pressure to opacity</td><td>Switches the effect on or off.</td></tr>
+<tr><td>Light</td><td>Opacity at the lightest pressure.</td></tr>
+<tr><td>Hard</td><td>Opacity at full pressure.</td></tr>
+<tr><td>Curve</td><td>Below 1 the line gets dark early; above 1 you press harder for the same darkness. The graph shows the result.</td></tr>
+</table>
+<p>The Surface pen reports a narrow pressure range, so InkStudio stretches each stroke's own range over Light to Hard: easing off always shows.</p>
+<div class="clear"></div>
+
+<h1>Brush kinds in Illustrator</h1>
+<table>
+<tr><th>Kind</th><th>What it does and how to use it</th></tr>
+<tr><td>Art brush</td><td>Stretches one piece of artwork along the stroke: ink swipes, pencil lines, paint strokes. Most textured brushes are art brushes. Long strokes stretch the artwork, so draw in strokes about the length of the original mark.</td></tr>
+<tr><td>Pattern brush</td><td>Repeats tiles along the stroke, with corner and end tiles: borders, chains, stitches, torn edges.</td></tr>
+<tr><td>Scatter brush</td><td>Scatters copies of artwork along the stroke: leaves, dots, splatter, grain.</td></tr>
+<tr><td>Bristle brush</td><td>Simulated bristles with transparency: Illustrator's painterly brush. Many overlapping bristle strokes make files heavy; expand or rasterise finished passages if Illustrator slows down.</td></tr>
+<tr><td>Calligraphic brush</td><td>An elliptical nib whose angle, roundness and size can follow pressure, tilt or rotation.</td></tr>
+</table>
+
+<h1>Pressure and the Paintbrush</h1>
+<p>Width from pressure comes from the brush: art and calligraphic brushes can use a width profile or pressure options, and the live pens in Media already have them. Double-click the <b>Paintbrush</b> tool for its options: <b>Fidelity</b> towards Smooth gives cleaner curves, <b>Keep Selected</b> off stops the next stroke from replacing the last one, and <b>Edit Selected Paths</b> off lets you draw over strokes without changing them.</p>
+<p>The stroke weight on the rail scales the brush. For pressure brushes it sets the widest point; the lightest pressure gives the thinnest line the brush allows.</p>
+
+<h1>Drawing traditional media in vector</h1>
+<p><b>Pencil.</b> Use the Textured pencils with the Pencil tool (N) at small sizes and Multiply. Build tone with several light strokes; vector strokes keep their grain at any zoom.</p>
+<p><b>Ink.</b> Use the live pens with the Paintbrush. Draw long, confident strokes and keep Fidelity towards Smooth. Fineliner and technical pen give even lines; brush pens swell with pressure.</p>
+<p><b>Marker.</b> Felt pen and Marker in Multiply darken where they overlap. Lay light colours first.</p>
+<p><b>Watercolour and gouache.</b> Use the Textured watercolour and gouache tools on their own layers in Multiply; overlapping washes deepen like real pigment. Lower layer opacity for glazes.</p>
+<p><b>Charcoal and pastel.</b> Use the Textured charcoal and pastel tools at larger sizes, with loose overlapping strokes.</p>
+<p><b>Oil and acrylic.</b> Use the bristle tools: flat and filbert for blocks of colour, round and liner for detail, fan for texture.</p>
+
+<h1>Layers and paper</h1>
+<p>Keep sketch, line and colour on separate layers, as you would with tracing paper. Lock the sketch layer and lower its opacity while you ink. For a paper look, put a warm off-white rectangle on a locked bottom layer and a paper texture on a top layer set to Multiply.</p>
+
+<h1>Shortcuts</h1>
+<table class="k">
+<tr><th>Key</th><th>Action</th></tr>
+<tr><td><kbd>B</kbd></td><td>Paintbrush</td></tr>
+<tr><td><kbd>N</kbd></td><td>Pencil</td></tr>
+<tr><td><kbd>V</kbd></td><td>Selection</td></tr>
+<tr><td><kbd>Shift</kbd> + <kbd>E</kbd></td><td>Eraser</td></tr>
+<tr><td><kbd>I</kbd></td><td>Eyedropper</td></tr>
+<tr><td><kbd>Shift</kbd> + <kbd>N</kbd></td><td>Shaper</td></tr>
+<tr><td><kbd>Space</kbd></td><td>Pan</td></tr>
+<tr><td><kbd>Shift</kbd> + <kbd>H</kbd></td><td>Rotate View</td></tr>
+<tr><td><kbd>Cmd</kbd> + <kbd>Z</kbd></td><td>Undo; with Shift, redo</td></tr>
+<tr><td><kbd>Cmd</kbd> + <kbd>+</kbd> and <kbd>-</kbd></td><td>Zoom in and out</td></tr>
+<tr><td><kbd>Cmd</kbd> + <kbd>0</kbd></td><td>Fit artboard in window</td></tr>
+<tr><td><kbd>Tab</kbd></td><td>Hide or show all panels</td></tr>
+</table>
+
+<h1>Troubleshooting</h1>
+<table>
+<tr><th>Problem</th><th>Cause and fix</th></tr>
+<tr><td>Tapping a brush does not start drawing</td><td>InkStudio loads the brush but does not select the Paintbrush. Press B (or N for Textured tools).</td></tr>
+<tr><td>A new stroke replaces the last one</td><td>Keep Selected or Edit Selected Paths is on in Paintbrush options. Switch both off.</td></tr>
+<tr><td>Could not load</td><td>The tool's brush pack is not installed or was moved. Re-index your library.</td></tr>
+<tr><td>Strokes are not fading with pressure</td><td>Pressure to opacity works only on the three plain pens and needs PenCast running.</td></tr>
+<tr><td>Illustrator gets slow</td><td>Many bristle or scatter strokes. Expand or rasterise finished passages, or split the drawing into layers and hide the ones you are not working on.</td></tr>
+<tr><td>Panels are missing</td><td>Window &gt; Extensions, or Window &gt; Workspace &gt; Reset InkStudio.</td></tr>
+</table>
+
+</body>
+</html>

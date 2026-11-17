@@ -12,10 +12,10 @@ right. Everything else in Illustrator is still in its menus and panels.
 
 | Control | Use |
 |---|---|
-| Select (V) | Select and move strokes. |
 | Eraser | Erase parts of paths. |
-| Eyedropper (I) | Pick a colour and style from the artwork. |
 | Shape | Shaper tool: scribble a rough shape, Illustrator turns it into a clean one. |
+| Select (V) | Select and move strokes. |
+| Eyedropper (I) | Pick a colour and style from the artwork. |
 | Size | Stroke weight of the current and the next strokes. |
 | Opacity | Opacity of the next strokes (stamped on each new stroke). |
 | Colour | Current stroke colour; the swatches below are your recent colours. |
@@ -26,7 +26,7 @@ crashes Illustrator 2026 (see the README).
 
 ## Brush library
 
-**Packs** lists your brush libraries with previews; tap a pack to open it and a brush to load it. Loading applies
+The left column offers **Media**, **Favourites**, **Recent** and **All packs**, then your brushes grouped by **Mediums**, **Makers** and **Packs**; tap a pack to open it and a brush to load it. Loading applies
 the brush to the Paintbrush and to any selected strokes. **Favourites** keeps starred brushes, **Recent** the ones
 you used last. Search matches pack names, makers, tags and brush names.
 
@@ -46,9 +46,9 @@ Brush kinds, as Illustrator defines them:
 
 - **Pressure**: plain pens with a pressure width profile (felt pen, marker, wash). They work without any pack and
   can fade with pressure (below).
-- **Live**: pressure-sensitive pens and Adobe's bristle brushes in real brush shapes: round, liner, spotter, filbert,
+- **Live with pressure** (draw with the Paintbrush, B): pressure-sensitive pens and Adobe's bristle brushes in real brush shapes: round, liner, spotter, filbert,
   flat, bright, angle, fan, cat's tongue, dagger, mop, dome, deerfoot and stippler.
-- **Textured**: pencils, coloured pencil, fineliner, brush pen, dry ink, marker, watercolour, gouache, charcoal, soft
+- **Textured** (draw with the Pencil, N): pencils, coloured pencil, fineliner, brush pen, dry ink, marker, watercolour, gouache, charcoal, soft
   pastel and oil pastel. These use art brushes from specific packs; a tool whose pack is not installed shows
   "Could not load".
 
